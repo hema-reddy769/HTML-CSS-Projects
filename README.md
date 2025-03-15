@@ -33,7 +33,7 @@ Built to help beginners explore and learn front-end development in an interactiv
 
 ## 🌐 Live Demo
 
-The project is live and can be viewed here: [HTML & CSS Mini Projects Website](https://html-css-projects-phi.vercel.app/)
+The project is live and can be viewed here: [HTML & CSS Mini Projects Website](https://hema-reddy769.github.io/HTML-CSS-Projects/)
 
 ---
 
