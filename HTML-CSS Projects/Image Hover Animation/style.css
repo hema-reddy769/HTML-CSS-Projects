@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0396ff;
+}
+
+.container {
+    height: 400px;
+    min-width: 400px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.icon-image {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.icon-image img {
+    position: absolute;
+    height: 95%;
+    width: 95%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #0396ff;
+}
+
+.hover-image {
+    position: absolute;
+    height: 350px;
+    width: 300px;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    z-index: 0;
+    transition: transform 0.5s, z-index 0s, left 0.5s;
+    transition-delay: 0s, 0.5s, 0.5s;
+    pointer-events: none;
+}
+
+.icon-image:hover .hover-image {
+    left: -200px;
+    z-index: 12;
+    transform: translateX(80px);
+    transition: left 0.5s, z-index 0s, transform 0.5s;
+    transition-delay: 0s, 0.5s, 0.5s;
+}
+
+.hover-image img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 25px;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    left: 0;
+    padding: 0 10px;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    left: 50%;
+    bottom: -1px;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1;
+}
+
+.content .details {
+    position: relative;
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.icon-image:hover .details {
+    transition: all 0.5s ease;
+    transition-delay: 0.9s;
+    opacity: 1;
+    transform: translateY(4px);
+}
+
+.content .details:before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1;
+}
+
+.details .name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.details .job {
+    font-size: 17px;
+    color: #0396ff;
+    margin: -3px 0 5px 0;
+}
+
+.last .hover-image {
+    transition: none;
+}
+
+.last:hover .hover-image {
+    transition: none;
+}
+
+.last:hover .details {
+    transition-delay: 0s;
+}
+
+/* responsivenss */
+
+@media (max-width: 750px) {
+
+    .hover-image {
+        height: 300px;
+        width: 250px;
+    }
+
+    .icon-image:hover .hover-image {
+        left: -170px;
+    }
+}
+
+@media (max-width: 680px) {
+
+    .icon-image {
+        height: 60px;
+        width: 60px;
+    }
+
+    .hover-image {
+        height: 250px;
+        width: 200px;
+    }
+
+    .icon-image:hover .hover-image {
+        left: -150px;
+    }
+
+    .details .name {
+        font-size: 16px;
+    }
+
+    .details .job {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .container {
+        margin: -30px 0 0 50px;
+    }
+
+    .icon-image {
+        height: 50px;
+        width: 50px;
+    }
+
+    .hover-image {
+        height: 200px;
+        width: 150px;
+        margin-bottom: -10px;
+    }
+
+    .icon-image:hover .hover-image {
+        left: -130px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hidden {
+        display: none;
+    }
+
+    .container {
+        margin: 20% 0 0 50%;
+    }
+
+    .icon-image {
+        height: 50px;
+        width: 50px;
+    }
+
+    .hover-image {
+        height: 250px;
+        width: 200px;
+    }
+
+    .icon-image:hover .hover-image {
+        left: -150px;
+    }
+
+    .icon-image {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media (max-width: 440px) {
+
+    .container {
+        justify-content: center;
+        margin: 0;
+    }
+
+    .icon-image {
+        height: 50px;
+        width: 50px;
+    }
+
+    .hover-image {
+        height: 200px;
+        width: 150px;
+        margin-bottom: -10px;
+    }
+
+    .icon-image:hover .hover-image {
+        left: -130px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .container {
+        margin-left: 15%;
+    }
+}
